@@ -47,6 +47,7 @@ export default function HomePage() {
             {SERVICES.map((service) => (
               <div
                 key={service.id}
+                data-widget-box="true"
                 className="group overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-xl hover:border-emerald-300 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
@@ -116,7 +117,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="overflow-hidden rounded-2xl bg-white border border-emerald-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+            <div data-widget-box="true" className="overflow-hidden rounded-2xl bg-white border border-emerald-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
               <div>
                 <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-emerald-950">
                   <Image
@@ -170,7 +171,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="overflow-hidden rounded-2xl bg-white border border-emerald-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+            <div data-widget-box="true" className="overflow-hidden rounded-2xl bg-white border border-emerald-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
               <div>
                 <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-emerald-950">
                   <Image

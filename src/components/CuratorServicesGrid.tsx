@@ -33,6 +33,7 @@ export function CuratorServicesGrid() {
             return (
               <div
                 key={service.id}
+                data-widget-box="true"
                 className="group overflow-hidden rounded-2xl bg-white shadow-md hover:shadow-2xl border border-gray-200 hover:border-emerald-300 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>

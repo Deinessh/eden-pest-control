@@ -73,6 +73,7 @@ export default function CommercialPage() {
             {SECTORS.map((sector) => (
               <div
                 key={sector.title}
+                data-widget-box="true"
                 className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-xl hover:border-emerald-300 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>

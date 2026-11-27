@@ -14,9 +14,9 @@ export function ScrollAnimationProvider() {
 
     // Delay initialization past the hydration cycle so React never flags a DOM mismatch
     const timer = setTimeout(() => {
-      // Observe all content sections below the hero fold
+      // Observe all content sections and widget boxes
       const targets = document.querySelectorAll(
-        "section:not(.no-scroll-reveal), .scroll-reveal-item"
+        "section:not(.no-scroll-reveal), [data-widget-box], .widget-box"
       );
 
       const observer = new IntersectionObserver(
@@ -30,7 +30,7 @@ export function ScrollAnimationProvider() {
         },
         {
           rootMargin: "0px 0px -40px 0px",
-          threshold: 0.05,
+          threshold: 0.08,
         }
       );
 
@@ -41,7 +41,21 @@ export function ScrollAnimationProvider() {
         }
 
         const rect = el.getBoundingClientRect();
-        // If already in initial viewport, mark visible without hiding
+
+        // Stagger load animations for widget boxes inside grids
+        if (
+          el.hasAttribute("data-widget-box") ||
+          el.classList.contains("widget-box")
+        ) {
+          const siblings = Array.from(el.parentElement?.children || []);
+          const childIndex = siblings.indexOf(el);
+          if (childIndex >= 0) {
+            const staggerDelay = (childIndex % 3) * 110;
+            (el as HTMLElement).style.transitionDelay = `${staggerDelay}ms`;
+          }
+        }
+
+        // If already in initial viewport on page load, mark visible immediately
         if (rect.top < window.innerHeight && rect.bottom > 0) {
           el.setAttribute("data-scroll-reveal", "visible");
         } else {

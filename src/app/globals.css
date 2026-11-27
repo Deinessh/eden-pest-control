@@ -356,7 +356,7 @@ body {
   animation: floatSlow 4s ease-in-out infinite;
 }
 
-/* Scroll Load Animation for All Pages (Hydration-Safe via Data Attributes) */
+/* Scroll Load Animation for All Pages & Widget Boxes (Hydration-Safe via Data Attributes) */
 [data-scroll-reveal="hidden"] {
   opacity: 0;
   transform: translateY(28px);
@@ -368,6 +368,19 @@ body {
 [data-scroll-reveal="visible"] {
   opacity: 1;
   transform: translateY(0);
+}
+
+[data-widget-box][data-scroll-reveal="hidden"] {
+  opacity: 0;
+  transform: translateY(32px) scale(0.97);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+[data-widget-box][data-scroll-reveal="visible"] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -122,6 +122,7 @@ export default function ResidentialPage() {
             {RESIDENTIAL_PLANS.map((plan) => (
               <div
                 key={plan.title}
+                data-widget-box="true"
                 className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>

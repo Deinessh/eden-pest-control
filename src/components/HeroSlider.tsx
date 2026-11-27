@@ -11,33 +11,33 @@ import { SITE } from "@/data/site";
 const SLIDES = [
   {
     image: "/images/hero-1.png",
+    title: "Mosquito Control",
+    sub: "Outdoor Thermal Fogging & Larvicidal Breeding Barrier for Grounds",
+    badge: "Dengue & Malaria Shield",
+  },
+  {
+    image: "/images/hero-2.png",
     title: "Termite Control (ATT)",
     sub: "Pre- & Post-Construction Drill-Fill-Seal Barrier with 5+ Years Guarantee",
     badge: "5+ Years Guarantee",
   },
   {
-    image: "/images/hero-2.png",
-    title: "Cockroach Control",
-    sub: "Targeted Odorless Herbal Gel Baiting & Crevice Pipeline Flushing",
-    badge: "100% Odorless & Safe",
-  },
-  {
     image: "/images/hero-3.png",
-    title: "Rodent & Rat Control",
-    sub: "Tamper-Proof Lockable Bait Stations & Structural Perimeter Proofing",
-    badge: "Tamper-Proof",
-  },
-  {
-    image: "/images/hero-4.png",
     title: "Ant Control",
     sub: "Colony-Transfer Food Baits & Long-Lasting Indoor-Outdoor Barrier",
     badge: "Colony Source Kill",
   },
   {
+    image: "/images/hero-4.png",
+    title: "Cockroach Control",
+    sub: "Targeted Odorless Herbal Gel Baiting & Crevice Pipeline Flushing",
+    badge: "100% Odorless & Safe",
+  },
+  {
     image: "/images/hero-5.png",
-    title: "Lizard & Spider Control",
-    sub: "Eco-Friendly Safe Repellents & Cobweb Clearance for Ceilings and Lights",
-    badge: "Safe Repellent",
+    title: "Rodent & Rat Control",
+    sub: "Tamper-Proof Lockable Bait Stations & Structural Perimeter Proofing",
+    badge: "Tamper-Proof",
   },
   {
     image: "/images/hero-6.png",
@@ -47,9 +47,9 @@ const SLIDES = [
   },
   {
     image: "/images/hero-7.png",
-    title: "Mosquito Control",
-    sub: "Outdoor Thermal Fogging & Larvicidal Breeding Barrier for Grounds",
-    badge: "Dengue & Malaria Shield",
+    title: "Lizard & Spider Control",
+    sub: "Eco-Friendly Safe Repellents & Cobweb Clearance for Ceilings and Lights",
+    badge: "Safe Repellent",
   },
 ];
 
