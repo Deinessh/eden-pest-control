@@ -72,10 +72,16 @@ export function Footer() {
               Head Office &amp; Hours
             </h3>
             <div className="space-y-2.5 text-xs text-emerald-100/90">
-              <div className="flex items-start gap-2">
-                <MapPin className="h-4 w-4 text-amber-400 shrink-0 mt-0.5" />
+              <a
+                href={SITE.mapDirectUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-2 hover:text-white transition-colors group"
+                title="Open location in Google Maps"
+              >
+                <MapPin className="h-4 w-4 text-amber-400 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
                 <p className="leading-relaxed">{SITE.address}</p>
-              </div>
+              </a>
 
               <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4 text-amber-400 shrink-0" />

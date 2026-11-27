@@ -19,9 +19,8 @@ export const SITE = {
   addressFull:
     "EDEN PEST CONTROL SERVICES, 11, Flat No. 4, Thirumalai Appan Street, Cholambedu Salai, Netaji Nagar, Thirumullaivoyal, Chennai, Tamil Nadu 600062",
   mapEmbedUrl:
-    "https://maps.google.com/maps?q=EDEN%20PEST%20CONTROL%20SERVICES,%2011,%20Flat%20No.%204,%20Thirumalai%20Appan%20Street,%20Cholambedu%20Salai,%20Netaji%20Nagar,%20Thirumullaivoyal,%20Chennai,%20Tamil%20Nadu%20600062&t=&z=16&ie=UTF8&iwloc=&output=embed",
-  mapDirectUrl:
-    "https://www.google.com/maps/search/?api=1&query=EDEN+PEST+CONTROL+SERVICES,+11,+Flat+No.+4,+Thirumalai+Appan+Street,+Cholambedu+Salai,+Netaji+Nagar,+Thirumullaivoyal,+Chennai,+Tamil+Nadu+600062",
+    "https://www.google.com/maps/embed?origin=mfe&pb=!1m5!3m3!1m2!2sEDEN+PEST+CONTROL+SERVICES!4s4692630869592880207!6i16",
+  mapDirectUrl: "https://maps.app.goo.gl/2xuh6vXet54sq3er6",
 };
 
 export interface NavItem {
