@@ -3,6 +3,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { FloatingActions } from "@/components/FloatingActions";
+import { ScrollAnimationProvider } from "@/components/ScrollAnimationProvider";
 import { SITE } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -34,6 +35,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <FloatingActions />
+        <ScrollAnimationProvider />
       </body>
     </html>
   );

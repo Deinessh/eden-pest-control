@@ -7,30 +7,49 @@ import { Phone, ArrowRight, ShieldCheck, Award, ChevronLeft, ChevronRight } from
 import { WhatsAppIcon } from "./WhatsAppIcon";
 import { SITE } from "@/data/site";
 
+// Hero Slider with User-Provided Images hero-1 through hero-7
 const SLIDES = [
   {
-    image: "/images/hero-technician.jpg",
-    title: "Specialist Termite Control",
-    sub: "Drill-Fill-Seal Chemical Barrier with 5+ Years Written Guarantee",
+    image: "/images/hero-1.png",
+    title: "Termite Control (ATT)",
+    sub: "Pre- & Post-Construction Drill-Fill-Seal Barrier with 5+ Years Guarantee",
     badge: "5+ Years Guarantee",
   },
   {
-    image: "/images/commercial-warehouse.jpg",
-    title: "Commercial & Structural Shield",
-    sub: "Industrial Grade Barrier Protecting Warehouses, Factories & Commercial Facilities",
-    badge: "Government Approved",
+    image: "/images/hero-2.png",
+    title: "Cockroach Control",
+    sub: "Targeted Odorless Herbal Gel Baiting & Crevice Pipeline Flushing",
+    badge: "100% Odorless & Safe",
   },
   {
-    image: "/images/cockroach-service.jpg",
-    title: "Odorless Kitchen Gel Treatment",
-    sub: "100% Eradication of Cockroaches & Ants with Zero Utensil Vacating",
-    badge: "Kids & Pet Safe",
+    image: "/images/hero-3.png",
+    title: "Rodent & Rat Control",
+    sub: "Tamper-Proof Lockable Bait Stations & Structural Perimeter Proofing",
+    badge: "Tamper-Proof",
   },
   {
-    image: "/images/commercial-restaurant.jpg",
-    title: "Food Hygiene & Restaurant Protection",
-    sub: "Strict Audit-Ready Preventive Pest Control for Commercial Kitchens & Hotels",
-    badge: "Food Safe Certified",
+    image: "/images/hero-4.png",
+    title: "Ant Control",
+    sub: "Colony-Transfer Food Baits & Long-Lasting Indoor-Outdoor Barrier",
+    badge: "Colony Source Kill",
+  },
+  {
+    image: "/images/hero-5.png",
+    title: "Lizard & Spider Control",
+    sub: "Eco-Friendly Safe Repellents & Cobweb Clearance for Ceilings and Lights",
+    badge: "Safe Repellent",
+  },
+  {
+    image: "/images/hero-6.png",
+    title: "Bed Bug Treatment",
+    sub: "Deep Upholstery & Mattress Eradication Destroying Adults, Nymphs & Eggs",
+    badge: "Deep Eradication",
+  },
+  {
+    image: "/images/hero-7.png",
+    title: "Mosquito Control",
+    sub: "Outdoor Thermal Fogging & Larvicidal Breeding Barrier for Grounds",
+    badge: "Dengue & Malaria Shield",
   },
 ];
 
@@ -70,7 +89,7 @@ export function HeroSlider() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % SLIDES.length);
-    }, 5000);
+    }, 4500);
     return () => clearInterval(timer);
   }, []);
 
@@ -78,75 +97,142 @@ export function HeroSlider() {
   const prevSlide = () => setCurrent((prev) => (prev - 1 + SLIDES.length) % SLIDES.length);
 
   return (
-    <section className="relative overflow-hidden bg-[#06260F] text-white py-14 sm:py-20 lg:py-24">
-      {/* Background Radial Glow */}
-      <div
-        className="absolute inset-0 opacity-25 pointer-events-none"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 10% 20%, #22C55E 0%, transparent 45%), radial-gradient(circle at 90% 70%, #F59E0B 0%, transparent 40%)",
-        }}
-      />
+    <section className="relative overflow-hidden bg-[#072B12] text-white py-14 sm:py-20 lg:py-24">
+      {/* All-in-One Panoramic Pest Protection Background Image with High Visibility */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/images/hero-all-in-one-bg.jpg"
+          alt="Eden Pest Control All-in-One Protection Background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center opacity-75"
+        />
+        {/* Subtle, rich gradient overlay allowing the panoramic imagery to shine through */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#072B12]/80 via-[#0A3D1A]/60 to-[#072B12]/80" />
+      </div>
 
-      {/* Increased Size & Increased Count: Animated Crawling Insects */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-10 opacity-40 select-none">
-        {/* Cockroach 1 (Top track, larger size: w-20 h-10) */}
-        <div className="bug-cockroach absolute top-6 left-0 flex items-center">
-          <svg viewBox="0 0 100 50" className="w-20 h-10 fill-amber-200 drop-shadow-md">
-            <ellipse cx="48" cy="25" rx="22" ry="9" />
-            <ellipse cx="26" cy="25" rx="7" ry="6" />
-            <path d="M 22 23 Q 6 10 2 4" stroke="#FDE68A" strokeWidth="2.2" fill="none" />
-            <path d="M 22 27 Q 6 38 2 46" stroke="#FDE68A" strokeWidth="2.2" fill="none" />
-            <path d="M 40 18 L 32 4 M 50 18 L 48 4 M 60 19 L 66 5" stroke="#FDE68A" strokeWidth="2.2" strokeLinecap="round" />
-            <path d="M 40 32 L 32 46 M 50 32 L 48 46 M 60 31 L 66 45" stroke="#FDE68A" strokeWidth="2.2" strokeLinecap="round" />
-          </svg>
+      {/* Realistic Real Moving Insects with Forward-Facing Zigzag Crawl */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-10 select-none">
+        {/* Cockroach 1 (Fast forward-head zigzag darting across upper track) */}
+        <div className="real-bug-cockroach-1 absolute top-6 -left-64">
+          <Image
+            src="/images/cockroach.png"
+            alt=""
+            width={120}
+            height={80}
+            className="w-20 sm:w-24 lg:w-28 h-auto drop-shadow-2xl opacity-90"
+          />
         </div>
 
-        {/* Cockroach 2 (Mid track, delayed crawl) */}
-        <div className="bug-cockroach-2 absolute top-2/3 left-0 flex items-center">
-          <svg viewBox="0 0 100 50" className="w-16 h-8 fill-amber-300 drop-shadow-md">
-            <ellipse cx="48" cy="25" rx="22" ry="9" />
-            <ellipse cx="26" cy="25" rx="7" ry="6" />
-            <path d="M 22 23 Q 6 10 2 4" stroke="#FDE68A" strokeWidth="2" fill="none" />
-            <path d="M 22 27 Q 6 38 2 46" stroke="#FDE68A" strokeWidth="2" fill="none" />
-            <path d="M 40 18 L 32 4 M 50 18 L 48 4 M 60 19 L 66 5" stroke="#FDE68A" strokeWidth="2" strokeLinecap="round" />
-            <path d="M 40 32 L 32 46 M 50 32 L 48 46 M 60 31 L 66 45" stroke="#FDE68A" strokeWidth="2" strokeLinecap="round" />
-          </svg>
+        {/* Cockroach 2 (Reversed track: moving right-to-left with head leading forward) */}
+        <div className="real-bug-cockroach-2 absolute top-2/3 -right-64">
+          <Image
+            src="/images/cockroach.png"
+            alt=""
+            width={130}
+            height={90}
+            className="w-22 sm:w-26 lg:w-30 h-auto drop-shadow-2xl opacity-95"
+          />
         </div>
 
-        {/* Trail of 4 Ants (Marching diagonally) */}
-        <div className="bug-ant-trail absolute top-1/3 left-0 flex items-center gap-6">
-          {[0, 1, 2, 3].map((antIdx) => (
-            <svg key={antIdx} viewBox="0 0 80 40" className="w-12 h-6 fill-emerald-300 drop-shadow">
-              <circle cx="20" cy="20" r="6" />
-              <ellipse cx="36" cy="20" rx="5" ry="4" />
-              <ellipse cx="54" cy="20" rx="10" ry="7" />
-              <path d="M 32 17 L 26 7 M 36 17 L 36 6 M 42 17 L 48 7" stroke="#A7F3D0" strokeWidth="2" strokeLinecap="round" />
-              <path d="M 32 23 L 26 33 M 36 23 L 36 34 M 42 23 L 48 33" stroke="#A7F3D0" strokeWidth="2" strokeLinecap="round" />
-              <path d="M 16 18 Q 8 13 4 8 M 16 22 Q 8 27 4 32" stroke="#A7F3D0" strokeWidth="1.8" fill="none" />
-            </svg>
-          ))}
+        {/* Cockroach 3 (Diagonal zigzag scurry across middle-lower track) */}
+        <div className="real-bug-cockroach-3 absolute bottom-8 -left-64">
+          <Image
+            src="/images/cockroach.png"
+            alt=""
+            width={110}
+            height={75}
+            className="w-18 sm:w-22 lg:w-26 h-auto drop-shadow-xl opacity-85"
+          />
         </div>
 
-        {/* Beetles & Bugs (Bottom track and lower reverse crawl) */}
-        <div className="bug-beetle absolute bottom-12 left-0 flex items-center">
-          <svg viewBox="0 0 70 45" className="w-16 h-10 fill-amber-300 drop-shadow">
-            <ellipse cx="38" cy="22" rx="16" ry="11" />
-            <circle cx="20" cy="22" r="6" />
-            <path d="M 32 12 L 26 3 M 40 12 L 42 2 M 48 13 L 56 4" stroke="#FDE047" strokeWidth="2.2" strokeLinecap="round" />
-            <path d="M 32 32 L 26 41 M 40 32 L 42 42 M 48 31 L 56 40" stroke="#FDE047" strokeWidth="2.2" strokeLinecap="round" />
-            <path d="M 16 20 Q 8 15 4 10 M 16 24 Q 8 29 4 34" stroke="#FDE047" strokeWidth="1.8" fill="none" />
-          </svg>
+        {/* Cockroach 4 (Mid-altitude erratic scouting crawl) */}
+        <div className="real-bug-cockroach-4 absolute top-40 -left-64">
+          <Image
+            src="/images/cockroach.png"
+            alt=""
+            width={115}
+            height={78}
+            className="w-18 sm:w-22 lg:w-24 h-auto drop-shadow-xl opacity-85"
+          />
         </div>
 
-        <div className="bug-beetle-2 absolute bottom-28 left-0 flex items-center">
-          <svg viewBox="0 0 70 45" className="w-14 h-9 fill-red-300 drop-shadow">
-            <ellipse cx="38" cy="22" rx="16" ry="11" />
-            <circle cx="20" cy="22" r="6" />
-            <path d="M 32 12 L 26 3 M 40 12 L 42 2 M 48 13 L 56 4" stroke="#FCA5A5" strokeWidth="2" strokeLinecap="round" />
-            <path d="M 32 32 L 26 41 M 40 32 L 42 42 M 48 31 L 56 40" stroke="#FCA5A5" strokeWidth="2" strokeLinecap="round" />
-            <path d="M 16 20 Q 8 15 4 10 M 16 24 Q 8 29 4 34" stroke="#FCA5A5" strokeWidth="1.6" fill="none" />
-          </svg>
+        {/* Ant 1 (Rapid zigzag trail along top edge, head forward) */}
+        <div className="real-bug-ant-1 absolute top-14 -left-64">
+          <Image
+            src="/images/ant.png"
+            alt=""
+            width={85}
+            height={60}
+            className="w-14 sm:w-16 lg:w-20 h-auto drop-shadow-lg opacity-90"
+          />
+        </div>
+
+        {/* Ant 2 (Quick scurry across mid-screen) */}
+        <div className="real-bug-ant-2 absolute top-1/2 -left-64">
+          <Image
+            src="/images/ant.png"
+            alt=""
+            width={80}
+            height={55}
+            className="w-13 sm:w-15 lg:w-18 h-auto drop-shadow-lg opacity-85"
+          />
+        </div>
+
+        {/* Ant 3 (Returning scout marching right-to-left) */}
+        <div className="real-bug-ant-3 absolute top-32 -right-64">
+          <Image
+            src="/images/ant.png"
+            alt=""
+            width={75}
+            height={50}
+            className="w-12 sm:w-14 lg:w-16 h-auto drop-shadow-lg opacity-85"
+          />
+        </div>
+
+        {/* Ant 4 (Trailing foraging ant) */}
+        <div className="real-bug-ant-4 absolute bottom-20 -left-64">
+          <Image
+            src="/images/ant.png"
+            alt=""
+            width={80}
+            height={55}
+            className="w-13 sm:w-15 lg:w-18 h-auto drop-shadow-lg opacity-90"
+          />
+        </div>
+
+        {/* Bed Bug 1 (Pacing crawl along bottom perimeter, head forward) */}
+        <div className="real-bug-bedbug-1 absolute bottom-4 -left-64">
+          <Image
+            src="/images/bedbug.png"
+            alt=""
+            width={85}
+            height={65}
+            className="w-14 sm:w-16 lg:w-18 h-auto drop-shadow-xl opacity-90"
+          />
+        </div>
+
+        {/* Bed Bug 2 (Crevice wanderer near top-left) */}
+        <div className="real-bug-bedbug-2 absolute top-28 -left-64">
+          <Image
+            src="/images/bedbug.png"
+            alt=""
+            width={80}
+            height={60}
+            className="w-13 sm:w-15 lg:w-17 h-auto drop-shadow-xl opacity-85"
+          />
+        </div>
+
+        {/* Bed Bug 3 (Crevice crawl right-to-left near lower-right) */}
+        <div className="real-bug-bedbug-3 absolute bottom-32 -right-64">
+          <Image
+            src="/images/bedbug.png"
+            alt=""
+            width={85}
+            height={65}
+            className="w-14 sm:w-16 lg:w-18 h-auto drop-shadow-xl opacity-90"
+          />
         </div>
       </div>
 
@@ -223,11 +309,11 @@ export function HeroSlider() {
               </div>
             </div>
 
-            {/* Action CTAs */}
+            {/* Styled Action Buttons */}
             <div className="flex flex-wrap gap-3.5 pt-2">
               <a
                 href={`tel:${SITE.phoneRaw}`}
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#B91C1C] px-6 py-3.5 text-sm sm:text-base font-black uppercase tracking-wide text-white shadow-xl shadow-red-950/40 hover:bg-[#991B1B] transition-transform hover:scale-105 active:scale-95"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#B91C1C] px-6 py-3.5 text-xs sm:text-sm font-sans font-bold tracking-widest uppercase text-white shadow-xl shadow-red-950/40 hover:bg-[#991B1B] transition-all hover:scale-105 active:scale-95"
               >
                 <Phone className="h-4 w-4" />
                 Call {SITE.phoneDisplay}
@@ -237,15 +323,15 @@ export function HeroSlider() {
                 href={SITE.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 rounded-xl bg-[#25D366] px-6 py-3.5 text-sm sm:text-base font-black uppercase tracking-wide text-white shadow-xl shadow-emerald-950/40 hover:bg-[#20ba5a] transition-transform hover:scale-105 active:scale-95"
+                className="inline-flex items-center justify-center gap-2.5 rounded-xl bg-[#25D366] px-6 py-3.5 text-xs sm:text-sm font-sans font-bold tracking-widest uppercase text-white shadow-xl shadow-emerald-950/40 hover:bg-[#20ba5a] transition-all hover:scale-105 active:scale-95"
               >
-                <WhatsAppIcon className="h-5 w-5 text-white" />
+                <WhatsAppIcon className="h-4 w-4 text-white" />
                 WhatsApp Book
               </a>
 
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-emerald-400/40 bg-white/10 backdrop-blur px-5 py-3.5 text-sm sm:text-base font-bold text-white hover:bg-white/20 transition-colors"
+                className="inline-flex items-center justify-center gap-1.5 rounded-xl border border-emerald-400/50 bg-white/10 backdrop-blur px-5 py-3.5 text-xs sm:text-sm font-sans font-bold tracking-widest uppercase text-white hover:bg-white/20 transition-all hover:scale-105"
               >
                 View Services
                 <ArrowRight className="h-4 w-4" />
@@ -253,7 +339,7 @@ export function HeroSlider() {
             </div>
           </div>
 
-          {/* Right Hero Visual: 4 Sliding Images Slider */}
+          {/* Right Hero Visual: User Provided hero-1 through hero-7 Slider */}
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 bg-emerald-950 h-[340px] sm:h-[420px] lg:h-[460px]">
               {SLIDES.map((slide, idx) => (

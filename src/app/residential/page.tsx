@@ -103,12 +103,12 @@ export default function ResidentialPage() {
               </div>
             </div>
 
-            {/* Changed Image of Residential Pest Control to Image 1 as requested */}
+            {/* Clean, Odorless & Guaranteed Home Protection Image (User Image 2) */}
             <div className="lg:col-span-6">
               <div className="rounded-2xl overflow-hidden shadow-xl border border-emerald-100">
                 <Image
-                  src="/images/residential-inspection.jpg"
-                  alt="Professional technician inspecting wooden door frame for termites"
+                  src="/images/residential-hero.jpg"
+                  alt="Professional technician consulting homeowner for residential pest protection"
                   width={900}
                   height={560}
                   priority

@@ -19,6 +19,7 @@ export default function ContactPage() {
         breadcrumb="Contact & Map"
         title="Contact Eden Pest Control Services"
         tamilSubtitle="WhatsApp மூலம் எளிதாக முன்பதிவு செய்யுங்கள்"
+        description="Get in touch with our specialist team for same-day free site inspections, customized residential & commercial pest control quotes, and emergency support throughout Chennai."
       />
 
       <section className="py-14 sm:py-16 bg-[#F4F9F5]">

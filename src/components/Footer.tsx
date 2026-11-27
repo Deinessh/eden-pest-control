@@ -6,15 +6,13 @@ import { NAV_ITEMS, SERVICES, SITE } from "@/data/site";
 
 export function Footer() {
   return (
-    <footer className="bg-[#082E13] text-emerald-50 py-8 pb-4">
+    <footer className="bg-[#082E13] text-emerald-50 py-10 pb-5 border-t border-emerald-900/60">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Brand Column with Cropped Fitted Logo (no excess white margin) */}
-          <div className="space-y-3">
-            <div className="inline-block rounded-lg bg-white px-2 py-1 shadow-sm">
-              <EdenLogo variant="footer" />
-            </div>
-            <p className="text-xs sm:text-sm text-emerald-100/85 leading-relaxed">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 items-start">
+          {/* Brand Column: 4-cols with ample clearance to prevent overlap */}
+          <div className="lg:col-span-4 space-y-3">
+            <EdenLogo variant="footer" />
+            <p className="text-xs sm:text-sm text-emerald-100/85 leading-relaxed pt-1 max-w-sm">
               {SITE.tamilMotto} — Trusted specialist termite &amp; complete pest
               control solutions for homes and commercial spaces across Chennai.
             </p>
@@ -30,8 +28,8 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Quick Links Column */}
-          <div>
+          {/* Quick Links Column: 2-cols */}
+          <div className="lg:col-span-2">
             <h3 className="text-xs font-bold uppercase tracking-wider text-amber-300 mb-3">
               Quick Links
             </h3>
@@ -49,8 +47,8 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Services Column */}
-          <div>
+          {/* Services Column: 3-cols */}
+          <div className="lg:col-span-3">
             <h3 className="text-xs font-bold uppercase tracking-wider text-amber-300 mb-3">
               Our Services
             </h3>
@@ -68,8 +66,8 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Office Address & Working Hours (Serving Area removed as requested) */}
-          <div className="space-y-3">
+          {/* Office Address & Working Hours: 3-cols */}
+          <div className="lg:col-span-3 space-y-3">
             <h3 className="text-xs font-bold uppercase tracking-wider text-amber-300">
               Head Office &amp; Hours
             </h3>
@@ -87,7 +85,7 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Footer Bottom Bar without extra space */}
+        {/* Footer Bottom Bar */}
         <div className="mt-8 pt-4 border-t border-emerald-800/70 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-emerald-200/75">
           <p>© 2026 {SITE.name}. All rights reserved.</p>
           <p>Specialist Termite Control • Chennai, Tamil Nadu 600062</p>

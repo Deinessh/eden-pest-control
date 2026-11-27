@@ -32,14 +32,15 @@ export function EdenLogo({
   if (variant === "footer") {
     return (
       <div
-        className={`relative h-12 sm:h-14 w-52 sm:w-60 overflow-hidden ${className}`}
+        className={`relative h-14 sm:h-16 w-full max-w-[260px] transition-transform duration-200 hover:scale-[1.02] ${className}`}
       >
         <Image
-          src="/images/eden-logo.png"
-          alt="EDEN PEST CONTROL SERVICES"
+          src="/images/eden-logo-footer.png"
+          alt="EDEN PEST CONTROL SERVICES - Specialist Termite Control"
           fill
-          sizes="240px"
-          className="object-contain object-left"
+          priority
+          sizes="(max-width: 768px) 220px, 260px"
+          className="object-contain object-left drop-shadow-md"
         />
       </div>
     );
@@ -48,7 +49,7 @@ export function EdenLogo({
   return (
     <div
       className={`relative ${
-        compact ? "h-11 w-44 sm:h-12 sm:w-48" : "h-14 w-56 sm:h-16 sm:w-64"
+        compact ? "h-11 w-36 sm:h-12 sm:w-40" : "h-14 w-48 sm:h-16 sm:w-56"
       } ${className}`}
     >
       <Image
@@ -56,7 +57,7 @@ export function EdenLogo({
         alt="EDEN PEST CONTROL SERVICES - Specialist Termite Control"
         fill
         priority
-        sizes="(max-width: 768px) 180px, 260px"
+        sizes="(max-width: 768px) 160px, 220px"
         className="object-contain object-left"
       />
     </div>

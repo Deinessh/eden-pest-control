@@ -3,8 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   ArrowRight,
-  Building2,
-  Home,
   Sparkles,
   CheckCircle2,
 } from "lucide-react";
@@ -118,35 +116,50 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="overflow-hidden rounded-2xl bg-white border border-emerald-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-              <div className="p-7 sm:p-8">
-                <div className="h-12 w-12 rounded-xl bg-emerald-100 text-[#0D4F21] flex items-center justify-center mb-4">
-                  <Home className="h-6 w-6" />
+            <div className="overflow-hidden rounded-2xl bg-white border border-emerald-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+              <div>
+                <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-emerald-950">
+                  <Image
+                    src="/images/home-residential-pest-control.jpg"
+                    alt="Residential Pest Control - Safe for Homes, Flats & Villas"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                  <span className="absolute top-4 left-4 rounded-full bg-emerald-600 px-3.5 py-1 text-xs font-bold text-white shadow-md">
+                    Homes, Flats &amp; Villas
+                  </span>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="font-serif text-2xl font-bold text-white drop-shadow">
+                      Residential Pest Control
+                    </h3>
+                  </div>
                 </div>
-                <h3 className="font-serif text-2xl font-bold text-gray-900">
-                  Residential Pest Control
-                </h3>
-                <p className="mt-2 text-sm text-gray-600 leading-relaxed">
-                  Protecting flats, apartments, independent villas, and new home
-                  constructions. Odorless kitchen gel baiting, bed bug deep
-                  steaming/spray, and 5+ Year anti-termite barriers.
-                </p>
-                <ul className="mt-4 space-y-2 text-sm text-gray-700">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-[#16A34A] shrink-0" />
-                    Child, elder, and pet-friendly formulations
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-[#16A34A] shrink-0" />
-                    Zero utensil shifting or kitchen vacating needed
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-[#16A34A] shrink-0" />
-                    Written 5+ Years Termite Guarantee Certificate
-                  </li>
-                </ul>
+
+                <div className="p-6 sm:p-7 space-y-3">
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Protecting flats, apartments, independent villas, and new home
+                    constructions. Odorless kitchen gel baiting, bed bug deep
+                    steaming/spray, and 5+ Year anti-termite barriers.
+                  </p>
+                  <ul className="space-y-2 text-sm text-gray-700">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-[#16A34A] shrink-0" />
+                      Child, elder, and pet-friendly formulations
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-[#16A34A] shrink-0" />
+                      Zero utensil shifting or kitchen vacating needed
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-[#16A34A] shrink-0" />
+                      Written 5+ Years Termite Guarantee Certificate
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div className="px-7 sm:px-8 pb-7">
+              <div className="px-6 sm:px-7 pb-6 sm:pb-7">
                 <Link
                   href="/residential"
                   className="inline-flex items-center gap-2 rounded-xl bg-[#0D4F21] px-5 py-2.5 text-sm font-bold text-white hover:bg-[#082E13] transition-colors"
@@ -157,35 +170,50 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="overflow-hidden rounded-2xl bg-white border border-emerald-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
-              <div className="p-7 sm:p-8">
-                <div className="h-12 w-12 rounded-xl bg-red-50 text-[#B91C1C] flex items-center justify-center mb-4">
-                  <Building2 className="h-6 w-6" />
+            <div className="overflow-hidden rounded-2xl bg-white border border-emerald-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+              <div>
+                <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-emerald-950">
+                  <Image
+                    src="/images/home-commercial-pest-control.jpg"
+                    alt="Commercial & Industrial Pest Control AMC in Chennai"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+                  <span className="absolute top-4 left-4 rounded-full bg-red-700 px-3.5 py-1 text-xs font-bold text-white shadow-md">
+                    Audit-Ready AMC Protection
+                  </span>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h3 className="font-serif text-2xl font-bold text-white drop-shadow">
+                      Commercial &amp; Industrial Pest Control
+                    </h3>
+                  </div>
                 </div>
-                <h3 className="font-serif text-2xl font-bold text-gray-900">
-                  Commercial &amp; Industrial Pest Control
-                </h3>
-                <p className="mt-2 text-sm text-gray-600 leading-relaxed">
-                  Scheduled Annual Maintenance Contracts (AMC) for corporate
-                  offices, restaurants, bakeries, warehouses, retail shops, and
-                  factories throughout Chennai.
-                </p>
-                <ul className="mt-4 space-y-2 text-sm text-gray-700">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-[#16A34A] shrink-0" />
-                    Flexible after-hours &amp; weekend service (10AM – 10PM)
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-[#16A34A] shrink-0" />
-                    Discreet baiting &amp; hygiene compliance reports
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle2 className="h-4 w-4 text-[#16A34A] shrink-0" />
-                    Priority emergency call-out support
-                  </li>
-                </ul>
+
+                <div className="p-6 sm:p-7 space-y-3">
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Scheduled Annual Maintenance Contracts (AMC) for corporate
+                    offices, restaurants, bakeries, warehouses, retail shops, and
+                    factories throughout Chennai.
+                  </p>
+                  <ul className="space-y-2 text-sm text-gray-700">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-[#16A34A] shrink-0" />
+                      Flexible after-hours &amp; weekend service (10AM – 10PM)
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-[#16A34A] shrink-0" />
+                      Discreet baiting &amp; hygiene compliance reports
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-[#16A34A] shrink-0" />
+                      Priority emergency call-out support
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div className="px-7 sm:px-8 pb-7">
+              <div className="px-6 sm:px-7 pb-6 sm:pb-7">
                 <Link
                   href="/commercial"
                   className="inline-flex items-center gap-2 rounded-xl bg-[#B91C1C] px-5 py-2.5 text-sm font-bold text-white hover:bg-[#991B1B] transition-colors"

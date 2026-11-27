@@ -11,14 +11,15 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <div>
+    <div className="bg-white min-h-screen">
       <PageHeader
         breadcrumb="Services"
         title="Our Pest Control Services"
         tamilSubtitle="கரையான் • கரப்பான் • எலி • கொசு • பல்லி • எறும்பு • முழுமையான கட்டுப்பாடு"
+        description="We deliver specialist termite control, odorless herbal cockroach treatments, rodent management, bed bug elimination, and outdoor mosquito fogging with certified 5+ years guarantee across Chennai."
       />
 
-      {/* Grid of services with centered overlapping badges matching Image 3 */}
+      {/* Grid of services matching Image 3 with white background */}
       <CuratorServicesGrid />
     </div>
   );

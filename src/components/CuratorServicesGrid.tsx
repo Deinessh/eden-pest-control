@@ -8,23 +8,23 @@ import { SERVICES, SITE } from "@/data/site";
 
 export function CuratorServicesGrid() {
   return (
-    <section className="bg-[#072B12] py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+    <section className="bg-white py-16 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-gray-100">
       <div className="mx-auto max-w-7xl">
-        {/* Section Header */}
+        {/* Section Header on White Background */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="inline-block rounded-full bg-emerald-900/80 border border-emerald-700 px-4 py-1 text-xs font-black uppercase tracking-wider text-amber-300">
+          <span className="inline-block rounded-full bg-emerald-50 border border-emerald-200 px-4 py-1 text-xs font-black uppercase tracking-wider text-[#0D4F21]">
             Professional Pest Treatments
           </span>
-          <h2 className="mt-3 font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="mt-3 font-serif text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight whitespace-nowrap">
             Specialized Pest Management
           </h2>
-          <p className="mt-2 text-emerald-100/80 text-sm sm:text-base leading-relaxed">
+          <p className="mt-2 text-gray-600 text-sm sm:text-base leading-relaxed">
             Targeted eradication and long-lasting barrier solutions for homes,
             apartments, and commercial spaces in Chennai.
           </p>
         </div>
 
-        {/* 3-Column Card Grid matching user uploaded Image 3 */}
+        {/* 3-Column Card Grid matching user uploaded Image 3 on White Background */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SERVICES.map((service) => {
             const waText = encodeURIComponent(
@@ -33,11 +33,11 @@ export function CuratorServicesGrid() {
             return (
               <div
                 key={service.id}
-                className="group overflow-hidden rounded-2xl bg-white shadow-xl border border-emerald-900/30 hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between"
+                className="group overflow-hidden rounded-2xl bg-white shadow-md hover:shadow-2xl border border-gray-200 hover:border-emerald-300 transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   {/* Top Image */}
-                  <div className="relative h-56 w-full overflow-hidden bg-gray-100">
+                  <div className="relative h-56 w-full overflow-hidden bg-gray-50">
                     <Image
                       src={service.image}
                       alt={service.name}

@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f1f8ed; /* Lite Pista Green Wash */
   --foreground: #111827;
+  --pista-green: #369800;
   --eden-green-dark: #0d4f21;
   --eden-green: #16a34a;
   --eden-red: #b91c1c;
   --eden-gold: #d97706;
-  --eden-surface: #f4f9f5;
+  --eden-surface: #edf7e7;
   --font-sans: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, Roboto,
     sans-serif;
   --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
@@ -30,74 +31,303 @@ body {
   font-family: var(--font-sans);
 }
 
-/* Crawling Cockroach, Ant, Bug Running on Background Animations */
-@keyframes bugCrawlRight {
+/* Realistic Forward-Facing Zigzag Crawl Animations (Head always leads in direction of motion) */
+
+/* Cockroach 1: West-to-East Zigzag Dash across upper track */
+@keyframes cockroachForwardZigzag1 {
   0% {
-    transform: translateX(-140px) translateY(0px) rotate(88deg);
+    transform: translate(-180px, 0px) rotate(15deg);
   }
-  25% {
-    transform: translateX(25vw) translateY(12px) rotate(93deg);
+  15% {
+    transform: translate(16vw, 28px) rotate(18deg);
+  }
+  18% {
+    transform: translate(16vw, 28px) rotate(-10deg); /* quick twitch pause */
+  }
+  32% {
+    transform: translate(38vw, -16px) rotate(-18deg);
   }
   50% {
-    transform: translateX(55vw) translateY(-8px) rotate(87deg);
+    transform: translate(60vw, 32px) rotate(22deg);
+  }
+  53% {
+    transform: translate(60vw, 32px) rotate(5deg); /* momentary freeze */
   }
   75% {
-    transform: translateX(85vw) translateY(10px) rotate(94deg);
+    transform: translate(88vw, -12px) rotate(-15deg);
+  }
+  88% {
+    transform: translate(102vw, 18px) rotate(16deg);
   }
   100% {
-    transform: translateX(115vw) translateY(0px) rotate(90deg);
+    transform: translate(118vw, 0px) rotate(0deg);
   }
 }
 
-@keyframes bugCrawlDiagonal {
+/* Cockroach 2: East-to-West Reverse Crawl (Head faces west: 180deg base) */
+@keyframes cockroachReverseZigzag2 {
   0% {
-    transform: translate(-140px, -60px) rotate(125deg);
+    transform: translate(180px, 0px) rotate(180deg);
+  }
+  18% {
+    transform: translate(-20vw, -24px) rotate(-165deg);
+  }
+  22% {
+    transform: translate(-20vw, -24px) rotate(175deg); /* pause */
+  }
+  45% {
+    transform: translate(-50vw, 30px) rotate(162deg);
+  }
+  68% {
+    transform: translate(-78vw, -18px) rotate(-168deg);
+  }
+  72% {
+    transform: translate(-78vw, -18px) rotate(180deg);
+  }
+  100% {
+    transform: translate(-118vw, 15px) rotate(170deg);
+  }
+}
+
+/* Cockroach 3: Diagonal Downward Zigzag Dash */
+@keyframes cockroachDiagonalZigzag3 {
+  0% {
+    transform: translate(-160px, -40px) rotate(22deg);
+  }
+  20% {
+    transform: translate(22vw, 25px) rotate(25deg);
+  }
+  38% {
+    transform: translate(44vw, -5px) rotate(-12deg);
+  }
+  58% {
+    transform: translate(68vw, 35px) rotate(20deg);
+  }
+  78% {
+    transform: translate(92vw, 10px) rotate(-10deg);
+  }
+  100% {
+    transform: translate(118vw, 45px) rotate(15deg);
+  }
+}
+
+/* Cockroach 4: Erratic Middle Patrol */
+@keyframes cockroachPatrolZigzag4 {
+  0% {
+    transform: translate(-140px, 15px) rotate(12deg);
+  }
+  25% {
+    transform: translate(28vw, -20px) rotate(-16deg);
+  }
+  48% {
+    transform: translate(55vw, 22px) rotate(20deg);
+  }
+  52% {
+    transform: translate(55vw, 22px) rotate(-5deg); /* alert pause */
+  }
+  78% {
+    transform: translate(85vw, -15px) rotate(-14deg);
+  }
+  100% {
+    transform: translate(118vw, 10px) rotate(8deg);
+  }
+}
+
+/* Ant 1: High-Speed Zigzag Trail (Head leads forward) */
+@keyframes antForwardZigzag1 {
+  0% {
+    transform: translate(-120px, -10px) rotate(16deg);
+  }
+  20% {
+    transform: translate(24vw, 20px) rotate(20deg);
+  }
+  40% {
+    transform: translate(48vw, -18px) rotate(-18deg);
+  }
+  60% {
+    transform: translate(72vw, 22px) rotate(19deg);
+  }
+  80% {
+    transform: translate(95vw, -12px) rotate(-15deg);
+  }
+  100% {
+    transform: translate(118vw, 15px) rotate(12deg);
+  }
+}
+
+/* Ant 2: Mid-Height Rapid Zigzag */
+@keyframes antForwardZigzag2 {
+  0% {
+    transform: translate(-100px, 25px) rotate(-14deg);
+  }
+  22% {
+    transform: translate(26vw, -15px) rotate(-18deg);
+  }
+  45% {
+    transform: translate(52vw, 22px) rotate(18deg);
+  }
+  70% {
+    transform: translate(80vw, -16px) rotate(-16deg);
+  }
+  100% {
+    transform: translate(118vw, 15px) rotate(14deg);
+  }
+}
+
+/* Ant 3: Reverse Ant March (Right-to-Left, head facing 180deg) */
+@keyframes antReverseZigzag3 {
+  0% {
+    transform: translate(120px, 0px) rotate(180deg);
+  }
+  25% {
+    transform: translate(-28vw, 18px) rotate(165deg);
   }
   50% {
-    transform: translate(50vw, 40px) rotate(132deg);
+    transform: translate(-58vw, -18px) rotate(-165deg);
+  }
+  75% {
+    transform: translate(-88vw, 20px) rotate(164deg);
   }
   100% {
-    transform: translate(115vw, 160px) rotate(128deg);
+    transform: translate(-118vw, -10px) rotate(180deg);
   }
 }
 
-@keyframes bugCrawlReverse {
+/* Ant 4: Lower Scurry */
+@keyframes antForwardZigzag4 {
   0% {
-    transform: translateX(115vw) translateY(0px) rotate(-90deg);
+    transform: translate(-110px, 0px) rotate(14deg);
   }
-  50% {
-    transform: translateX(50vw) translateY(12px) rotate(-85deg);
+  30% {
+    transform: translate(35vw, 18px) rotate(16deg);
+  }
+  60% {
+    transform: translate(70vw, -15px) rotate(-14deg);
   }
   100% {
-    transform: translateX(-140px) translateY(0px) rotate(-92deg);
+    transform: translate(118vw, 12px) rotate(10deg);
   }
 }
 
-.bug-cockroach {
-  animation: bugCrawlRight 15s linear infinite;
+/* Bed Bug 1: Steady Pacing Crawl across bottom (Head leads forward) */
+@keyframes bedbugForwardZigzag1 {
+  0% {
+    transform: translate(-120px, 0px) rotate(8deg);
+  }
+  28% {
+    transform: translate(32vw, 14px) rotate(12deg);
+  }
+  56% {
+    transform: translate(65vw, -12px) rotate(-10deg);
+  }
+  82% {
+    transform: translate(94vw, 12px) rotate(10deg);
+  }
+  100% {
+    transform: translate(118vw, 0px) rotate(6deg);
+  }
 }
 
-.bug-cockroach-2 {
-  animation: bugCrawlRight 19s linear infinite;
-  animation-delay: 5s;
+/* Bed Bug 2: Top Wandering Crawl */
+@keyframes bedbugForwardZigzag2 {
+  0% {
+    transform: translate(-100px, 12px) rotate(-10deg);
+  }
+  35% {
+    transform: translate(40vw, -14px) rotate(-12deg);
+  }
+  70% {
+    transform: translate(78vw, 16px) rotate(12deg);
+  }
+  100% {
+    transform: translate(118vw, -8px) rotate(-8deg);
+  }
 }
 
-.bug-ant-trail {
-  animation: bugCrawlDiagonal 12s linear infinite;
-  animation-delay: 1.5s;
+/* Bed Bug 3: Reverse Bottom Crawl (East-to-West, head facing 180deg) */
+@keyframes bedbugReverseZigzag3 {
+  0% {
+    transform: translate(110px, 0px) rotate(180deg);
+  }
+  35% {
+    transform: translate(-38vw, -12px) rotate(-170deg);
+  }
+  70% {
+    transform: translate(-76vw, 14px) rotate(168deg);
+  }
+  100% {
+    transform: translate(-118vw, 0px) rotate(180deg);
+  }
 }
 
-.bug-beetle {
-  animation: bugCrawlReverse 20s linear infinite;
-  animation-delay: 3s;
+/* Insect Animation Classes with Negative Delays for Immediate Startup Locomotion (No Idle Edge Freezes) */
+.real-bug-cockroach-1 {
+  animation: cockroachForwardZigzag1 13s linear infinite;
+  animation-delay: -4s;
+  will-change: transform;
 }
 
-.bug-beetle-2 {
-  animation: bugCrawlReverse 24s linear infinite;
-  animation-delay: 8s;
+.real-bug-cockroach-2 {
+  animation: cockroachReverseZigzag2 16s ease-in-out infinite;
+  animation-delay: -8s;
+  will-change: transform;
 }
 
-/* Smooth Fade-in on Scroll Animation */
+.real-bug-cockroach-3 {
+  animation: cockroachDiagonalZigzag3 15s linear infinite;
+  animation-delay: -11s;
+  will-change: transform;
+}
+
+.real-bug-cockroach-4 {
+  animation: cockroachPatrolZigzag4 17s ease-in-out infinite;
+  animation-delay: -2s;
+  will-change: transform;
+}
+
+.real-bug-ant-1 {
+  animation: antForwardZigzag1 10s linear infinite;
+  animation-delay: -1.5s;
+  will-change: transform;
+}
+
+.real-bug-ant-2 {
+  animation: antForwardZigzag2 11.5s ease-in-out infinite;
+  animation-delay: -5.5s;
+  will-change: transform;
+}
+
+.real-bug-ant-3 {
+  animation: antReverseZigzag3 13s linear infinite;
+  animation-delay: -7.5s;
+  will-change: transform;
+}
+
+.real-bug-ant-4 {
+  animation: antForwardZigzag4 12s linear infinite;
+  animation-delay: -3.5s;
+  will-change: transform;
+}
+
+.real-bug-bedbug-1 {
+  animation: bedbugForwardZigzag1 20s linear infinite;
+  animation-delay: -6s;
+  will-change: transform;
+}
+
+.real-bug-bedbug-2 {
+  animation: bedbugForwardZigzag2 23s linear infinite;
+  animation-delay: -13s;
+  will-change: transform;
+}
+
+.real-bug-bedbug-3 {
+  animation: bedbugReverseZigzag3 22s linear infinite;
+  animation-delay: -15s;
+  will-change: transform;
+}
+
+/* Keyframes for smooth UI transitions */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -124,4 +354,26 @@ body {
 
 .animate-float-slow {
   animation: floatSlow 4s ease-in-out infinite;
+}
+
+/* Scroll Load Animation for All Pages (Hydration-Safe via Data Attributes) */
+[data-scroll-reveal="hidden"] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+[data-scroll-reveal="visible"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-scroll-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
 }

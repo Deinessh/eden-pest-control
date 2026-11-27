@@ -61,7 +61,7 @@ export const SERVICES: PestService[] = [
     tamilName: "கரையான் கட்டுப்பாடு",
     category: "Specialized",
     badge: "5+ Years Guarantee",
-    image: "/images/termite-inspection.jpg",
+    image: "/images/Termite Control (ATT).png",
     shortDesc:
       "Pre-construction & post-construction anti-termite barrier treatments to safeguard wooden furniture, doors, and building foundations.",
     fullDesc:
@@ -82,7 +82,7 @@ export const SERVICES: PestService[] = [
     tamilName: "கரப்பான் பூச்சி கட்டுப்பாடு",
     category: "Residential & Commercial",
     badge: "Odorless Gel",
-    image: "/images/cockroach-service.jpg",
+    image: "/images/Cockroach Control.png",
     shortDesc:
       "Targeted herbal gel baiting and crevice treatment for kitchens, drains, pantries, and commercial food areas.",
     fullDesc:
@@ -103,7 +103,7 @@ export const SERVICES: PestService[] = [
     tamilName: "எலி கட்டுப்பாடு",
     category: "Residential & Commercial",
     badge: "Tamper-Proof",
-    image: "/images/rodent-service.jpg",
+    image: "/images/rodent control.png",
     shortDesc:
       "Safe bait stations, humane trapping, and entry-point sealing to protect wiring, inventory, and hygiene.",
     fullDesc:
@@ -118,25 +118,46 @@ export const SERVICES: PestService[] = [
     safeFor: "Warehouses, Homes, Offices & Retail",
   },
   {
-    id: "mosquito",
-    slug: "mosquito-control",
-    name: "Mosquito Control",
-    tamilName: "கொசு கட்டுப்பாடு",
+    id: "ant",
+    slug: "ant-control",
+    name: "Ant Control",
+    tamilName: "எறும்பு கட்டுப்பாடு",
     category: "Residential & Commercial",
-    badge: "Dengue & Malaria Shield",
-    image: "/images/mosquito-service.jpg",
+    badge: "Colony Source Kill",
+    image: "/images/ant control.png",
     shortDesc:
-      "Thermal fogging, ULV misting, and larvicidal treatments for compounds, gardens, apartments, and water stagnation zones.",
+      "Colony-eliminating baiting and perimeter barrier treatment to stop red ants, black ants, and carpenter ants.",
     fullDesc:
-      "Protect your family and employees from vector-borne diseases with our dual-action adulticide fogging and breeding-source larvicide program tailored for Chennai's coastal climate.",
+      "Surface sprays only scatter ant trails. We use targeted colony-transfer baits and exterior perimeter barriers that eliminate the nest at its source.",
     methods: [
-      "Thermal & cold ULV fogging for outdoor perimeters",
-      "Larvicidal treatment for drains & stagnant water",
-      "Indoor residual wall resting-zone spray",
-      "Scheduled community & villa coverage",
+      "Colony-transfer sweet & protein gel baits",
+      "Window sill & wall-crack barrier treatment",
+      "Garden & courtyard nest drenching",
+      "Child & pet-friendly indoor application",
     ],
-    warranty: "Monthly / Seasonal Coverage",
-    safeFor: "Gated Communities, Villas, Schools & Parks",
+    warranty: "Long-Lasting Relief",
+    safeFor: "Homes, Kitchens, Offices & Play Areas",
+  },
+  {
+    id: "lizard-spider",
+    slug: "lizard-spider-control",
+    name: "Lizard & Spider Control",
+    tamilName: "பல்லி & சிலந்தி கட்டுப்பாடு",
+    category: "Residential & Commercial",
+    badge: "Safe Repellent",
+    image: "/images/Lizard & Spider Control.png",
+    shortDesc:
+      "Eco-friendly repellent spray and cobweb clearing for ceilings, balconies, garages, and commercial halls.",
+    fullDesc:
+      "Keep walls, lights, and ceilings spotless with our safe botanical & residual repellent treatment that deters lizards and clears spider webs while cutting off their insect food supply.",
+    methods: [
+      "Cobweb removal & ceiling corner treatment",
+      "Botanical & safe repellent around light fixtures",
+      "Window, ventilator & balcony perimeter shield",
+      "Combined insect-prey reduction",
+    ],
+    warranty: "Seasonal Maintenance Available",
+    safeFor: "Apartments, Showrooms, Offices & Factories",
   },
   {
     id: "bedbug",
@@ -160,46 +181,25 @@ export const SERVICES: PestService[] = [
     safeFor: "Bedrooms, Hostels, Hotels & Guest Houses",
   },
   {
-    id: "ant",
-    slug: "ant-control",
-    name: "Ant Control",
-    tamilName: "எறும்பு கட்டுப்பாடு",
+    id: "mosquito",
+    slug: "mosquito-control",
+    name: "Mosquito Control",
+    tamilName: "கொசு கட்டுப்பாடு",
     category: "Residential & Commercial",
-    badge: "Colony Source Kill",
-    image: "/images/hero-technician.jpg",
+    badge: "Dengue & Malaria Shield",
+    image: "/images/mosquito-service.jpg",
     shortDesc:
-      "Colony-eliminating baiting and perimeter barrier treatment to stop red ants, black ants, and carpenter ants.",
+      "Thermal fogging, ULV misting, and larvicidal treatments for compounds, gardens, apartments, and water stagnation zones.",
     fullDesc:
-      "Surface sprays only scatter ant trails. We use targeted colony-transfer baits and exterior perimeter barriers that eliminate the nest at its source.",
+      "Protect your family and employees from vector-borne diseases with our dual-action adulticide fogging and breeding-source larvicide program tailored for Chennai's coastal climate.",
     methods: [
-      "Colony-transfer sweet & protein gel baits",
-      "Window sill & wall-crack barrier treatment",
-      "Garden & courtyard nest drenching",
-      "Child & pet-friendly indoor application",
+      "Thermal & cold ULV fogging for outdoor perimeters",
+      "Larvicidal treatment for drains & stagnant water",
+      "Indoor residual wall resting-zone spray",
+      "Scheduled community & villa coverage",
     ],
-    warranty: "Long-Lasting Relief",
-    safeFor: "Homes, Kitchens, Offices & Play Areas",
-  },
-  {
-    id: "lizard-spider",
-    slug: "lizard-spider-control",
-    name: "Lizard & Spider Control",
-    tamilName: "பல்லி & சிலந்தி கட்டுப்பாடு",
-    category: "Residential & Commercial",
-    badge: "Safe Repellent",
-    image: "/images/termite-inspection.jpg",
-    shortDesc:
-      "Eco-friendly repellent spray and cobweb clearing for ceilings, balconies, garages, and commercial halls.",
-    fullDesc:
-      "Keep walls, lights, and ceilings spotless with our safe botanical & residual repellent treatment that deters lizards and clears spider webs while cutting off their insect food supply.",
-    methods: [
-      "Cobweb removal & ceiling corner treatment",
-      "Botanical & safe repellent around light fixtures",
-      "Window, ventilator & balcony perimeter shield",
-      "Combined insect-prey reduction",
-    ],
-    warranty: "Seasonal Maintenance Available",
-    safeFor: "Apartments, Showrooms, Offices & Factories",
+    warranty: "Monthly / Seasonal Coverage",
+    safeFor: "Gated Communities, Villas, Schools & Parks",
   },
 ];
 
