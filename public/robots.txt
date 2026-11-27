@@ -1,0 +1,8 @@
+# Robots.txt for EDEN PEST CONTROL SERVICES
+# https://edenpestcontrol.in
+
+User-agent: *
+Allow: /
+
+# Sitemap Index
+Sitemap: https://edenpestcontrol.in/sitemap.xml

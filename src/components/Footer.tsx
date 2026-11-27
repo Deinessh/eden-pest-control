@@ -86,9 +86,23 @@ export function Footer() {
         </div>
 
         {/* Footer Bottom Bar */}
-        <div className="mt-8 pt-4 border-t border-emerald-800/70 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-emerald-200/75">
-          <p>© 2026 {SITE.name}. All rights reserved.</p>
-          <p>Specialist Termite Control • Chennai, Tamil Nadu 600062</p>
+        <div className="mt-8 pt-5 border-t border-emerald-800/70 space-y-3 text-xs text-emerald-200/75">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-2">
+            <p>© 2026 {SITE.name}. All rights reserved.</p>
+            <p>Specialist Termite Control • Chennai, Tamil Nadu 600062</p>
+          </div>
+
+          <p className="text-center text-xs text-emerald-200/80 pt-1">
+            Developed by{" "}
+            <a
+              href="https://thunderfoxweb.co.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-bold text-amber-300 hover:text-amber-200 hover:underline transition-colors tracking-wide"
+            >
+              ThunderFoxWeb
+            </a>
+          </p>
         </div>
       </div>
     </footer>
