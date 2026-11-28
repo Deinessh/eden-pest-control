@@ -75,6 +75,27 @@ export const SERVICES: PestService[] = [
     safeFor: "Homes, Villas, Apartments & Commercial Buildings",
   },
   {
+    id: "anti-termite-piping",
+    slug: "anti-termite-piping-system",
+    name: "Anti Termite Piping System",
+    tamilName: "கரையான் தடுப்பு குழாய் அமைப்பு",
+    category: "Specialized",
+    badge: "Pre-Construction Tech",
+    image: "/images/anti-termite-piping.jpg",
+    shortDesc:
+      "Advanced subterranean reticulation piping network installed along plinth beams for lifetime chemical replenishment without drilling floors.",
+    fullDesc:
+      "The Anti Termite Reticulation Piping System is a state-of-the-art pre-construction solution. High-grade perforated permeable pipes are permanently laid along the foundation perimeter and flooring plinth. External junction recharge ports allow hassle-free chemical replenishment throughout the building's lifespan — guaranteeing 100% barrier protection without puncturing tiles, marble, or interior aesthetics.",
+    methods: [
+      "Perforated porous piping grid installed along plinth & foundation",
+      "Uniform pressurized termiticide chemical distribution",
+      "External tamper-proof junction refill boxes outside the building",
+      "Lifetime rechargeability without breaking or drilling floors",
+    ],
+    warranty: "10+ Years System Warranty",
+    safeFor: "New Constructions, Villas, Independent Homes & Commercial Sites",
+  },
+  {
     id: "cockroach",
     slug: "cockroach-control",
     name: "Cockroach Control",

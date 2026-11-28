@@ -7,6 +7,7 @@ import {
   BedDouble,
   Sparkles,
   Home,
+  Layers,
 } from "lucide-react";
 
 export function ServiceIcon({
@@ -19,6 +20,9 @@ export function ServiceIcon({
   switch (id) {
     case "termite":
       return <ShieldAlert className={className} />;
+    case "anti-termite-piping":
+    case "piping":
+      return <Layers className={className} />;
     case "cockroach":
       return <Bug className={className} />;
     case "rodent":
